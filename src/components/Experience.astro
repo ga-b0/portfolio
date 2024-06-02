@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Abril 2023 - Actualmente...",
+    title: "Programador PHP Jr",
+    company: "Sume Clientes",
+    description:
+      "Trabajo actualizando una plataforma hecha con Laravel a una versión más actual del framewrok, además de dar mantenimiento al sistema antiguo que también trabaja con Laravel, MySQL y JQuery",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

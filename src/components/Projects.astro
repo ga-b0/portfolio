@@ -1,0 +1,52 @@
+---
+
+import TailwindIcon from '../icons/tailwind.astro';
+import ReactIcon from '../icons/react.astro';
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-[#003159] text-white",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+}
+
+
+const PROJECTS = [
+    {
+        title: "Programador PHP Jr",
+        description: "Trabajo actualizando una plataforma hecha con Laravel a una versión más actual del framewrok, además de dar mantenimiento al sistema antiguo que también trabaja con Laravel, MySQL y JQuery",
+        link: "#",
+        github: "#",
+        image: "https://via.placeholder.com/300x200",
+        tags: [TAGS.REACT, TAGS.TAILWIND],
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image, link}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {
+                    tags.map(tag => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-4"/>
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={title}>
+        </article>
+    ))
+}
