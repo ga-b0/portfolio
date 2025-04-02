@@ -8,6 +8,9 @@ import LinkButton from "../components/LinkButton.astro";
 import React from "../icons/react.astro";
 import Css from "../icons/css.astro";
 import JavaScript from "../icons/javascript.astro";
+import Angular from "../icons/angular.astro";
+import Html from "../icons/html.astro";
+import GraphQl from "../icons/graphql.astro";
 
 const TAGS = {
   NEXT: {
@@ -40,8 +43,32 @@ const TAGS = {
     class: "bg-black text-white",
     icon: JavaScript,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-black text-white",
+    icon: Angular,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: Html,
+  },
+  GRAPHQL: {
+    name: "GraphQL",
+    class: "bg-black text-white",
+    icon: GraphQl,
+  },
 };
 const PROJECTS = [
+  {
+    title: "Chatbot",
+    description:
+      "Chatbot estilo ChatGPT hecho desde cero utilizando JavaScript Vanilla, CSS, Tailwind y WebLLM. Utilizando el modelo Gemma.",
+    link: "https://chatbot-gabo.netlify.app/",
+    github: "https://github.com/ga-b0/chatbot",
+    image: "/images/chatbot.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.TAILWIND],
+  },
   {
     title: "Exoplanet Viewer",
     description:
@@ -52,6 +79,15 @@ const PROJECTS = [
     tags: [TAGS.UNITY],
   },
   {
+    title: "Rick and Morty Api Website",
+    description:
+      "Aplicación web hecha con Angular, CSS y que hace peticiones a un servidor GraphQL para traer datos de la API de Rick and Morty. Tiene integrado un sistema de login que hace uso de la DummyJSON Api que integra JWT.",
+    link: "https://rickandmortyapisite.netlify.app/login",
+    github: "https://github.com/ga-b0/rick-and-morty-api",
+    image: "/images/rick.webp",
+    tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.TAILWIND],
+  },
+  {
     title: "Tic Tac Toe",
     description:
       "Videojuego clásico del Tic Tac Toe hecho desde cero con React y CSS.",
@@ -59,6 +95,15 @@ const PROJECTS = [
     github: "https://github.com/ga-b0/tic-tac-toe",
     image: "/images/tic-tac-toe.webp",
     tags: [TAGS.REACT, TAGS.CSS],
+  },
+  {
+    title: "Responsive Landing Page Using Flexbox",
+    description:
+      "Landing page hecha con CSS y que es Responsive gracias al uso de Media Queries.",
+    link: "https://ga-b0.github.io/Responsive-landing-page-using-Flexbox/",
+    github: "https://github.com/ga-b0/Responsive-landing-page-using-Flexbox",
+    image: "/images/landing.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
   },
   {
     title: "Conecta 4",
@@ -77,15 +122,6 @@ const PROJECTS = [
     github: "https://github.com/ga-b0/chatbot",
     image: "/images/todo-app.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS],
-  },
-  {
-    title: "Chatbot",
-    description:
-      "Chatbot estilo ChatGPT hecho desde cero utilizando JavaScript Vanilla, CSS, Tailwind y WebLLM. Utilizando el modelo Gemma.",
-    link: "https://chatbot-gabo.netlify.app/",
-    github: "https://github.com/ga-b0/chatbot",
-    image: "/images/chatbot.webp",
-    tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.TAILWIND],
   },
 ];
 ---

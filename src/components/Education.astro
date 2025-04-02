@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+{
+    date: "Enero 2022 - Presente... ",
+    title: "Ingeniería en Desarrollo de Software",
+    company: "Universidad de El Salvador",
+    description:
+      "Actualmente cursando mi séptimo ciclo. Cursos relevantes: Administración de Bases de Datos, Desarrollo de Aplicaciones Web, Desarrollo y Técnicas de Aplicaciones Web ",
+  },
+  {
+    date: "Enero 2020 - Diciembre 2024",
+    title: "Ingeniería en Diseño y Desarrollo de Videojuegos",
+    company: "Universidad Francisco Gavidia",
+    description:
+      "Cursos relevantes: Diseño y Desarrollo de Sitios Web, Aplicación de Modelos de Programación y Estructuras de Datos, Desarrollo de Backend y APIS. Promedio acumulativo: 9.1",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
