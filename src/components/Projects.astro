@@ -11,6 +11,7 @@ import JavaScript from "../icons/javascript.astro";
 import Angular from "../icons/angular.astro";
 import Html from "../icons/html.astro";
 import GraphQl from "../icons/graphql.astro";
+import AstroIcon from "../icons/astro-icon.astro";
 
 const TAGS = {
   NEXT: {
@@ -58,6 +59,11 @@ const TAGS = {
     class: "bg-black text-white",
     icon: GraphQl,
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
 };
 const PROJECTS = [
   {
@@ -81,8 +87,8 @@ const PROJECTS = [
   {
     title: "Rick and Morty Api Website",
     description:
-      "Aplicación web hecha con Angular, CSS y que hace peticiones a un servidor GraphQL para traer datos de la API de Rick and Morty. Tiene integrado un sistema de login que hace uso de la DummyJSON Api que integra JWT.",
-    link: "https://rickandmortyapisite.netlify.app/login",
+      "Aplicación web hecha con Angular, CSS y que hace peticiones a un servidor GraphQL para traer datos de la API de Rick and Morty. Tiene integrado un sistema de login que hace uso de la DummyJSON Api que integra JWT. Además de implementar nuevas funcionalidades de Angular como los signals y otras funcionalidades como pipes, navegación entre rutas y demás",
+      link: 'https://rickandmortyapisite.netlify.app/login',
     github: "https://github.com/ga-b0/rick-and-morty-api",
     image: "/images/rick.webp",
     tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.TAILWIND],
@@ -123,6 +129,14 @@ const PROJECTS = [
     image: "/images/todo-app.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS],
   },
+  {
+    title: "Round Eleven Blog",
+    description:
+      "Prototipo de Blog hecho desde cero utilizando el framework Astro. Donde cada artículo es un archivo Markdown pero se renderiza como un componente de Astro",
+    link: "https://rondaonce.netlify.app/",
+    image: "/images/blog.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
 ];
 ---
 
@@ -133,7 +147,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Imagen del Proyecto"
+              alt={title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
